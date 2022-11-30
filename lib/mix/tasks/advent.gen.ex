@@ -7,7 +7,7 @@ defmodule Mix.Tasks.Advent.Gen do
   @moduledoc """
   # USAGE
   ```
-  mix advent.gen -y<year>>
+  mix advent.gen <--year <year>>
   ```
 
   # DESCRIPTION
