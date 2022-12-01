@@ -2,8 +2,8 @@ defmodule AdventOfCode.Solution.Year2022.Day01 do
   def part1(input) do
     input
     |> parse_input()
-    # |> Enum.map(fn x -> Enum.sum(x) end)
-    # |> Enum.max()
+    |> Enum.map(fn x -> Enum.sum(x) end)
+    |> Enum.max()
   end
 
   def part2(input) do
