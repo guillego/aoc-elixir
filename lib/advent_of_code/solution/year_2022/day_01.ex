@@ -19,7 +19,7 @@ defmodule AdventOfCode.Solution.Year2022.Day01 do
     args
     |> String.split("\n")
     |> Enum.chunk_by(fn x -> x == "" end)
-    |> Enum.filter(fn [a | b] -> a != "" end)
+    |> Enum.filter(fn [a | _b] -> a != "" end)
     |> Enum.map(fn x -> Enum.map(x, &String.to_integer/1) end)
   end
 end
