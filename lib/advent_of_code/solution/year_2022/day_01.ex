@@ -17,9 +17,8 @@ defmodule AdventOfCode.Solution.Year2022.Day01 do
 
   def parse_input(args) do
     args
-    |> String.split("\n")
-    |> Enum.chunk_by(fn x -> x == "" end)
-    |> Enum.filter(fn [a | _b] -> a != "" end)
+    |> String.split("\n\n", trim: true)
+    |> Enum.map(&String.split(&1, "\n", trim: true))
     |> Enum.map(fn x -> Enum.map(x, &String.to_integer/1) end)
   end
 end
