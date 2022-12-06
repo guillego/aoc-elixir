@@ -6,21 +6,36 @@ defmodule AdventOfCode.Solution.Year2022.Day06Test do
   setup do
     [
       input: """
+      mjqjpqmgbljsphdztnvjfqwrcgsmlb
+      """,
+
+      input2: """
+      bvwbjplbgvbhsrlpgdmjqwftvncz
       """
     ]
   end
 
-  @tag :skip
-  test "part1", %{input: input} do
+  test "part1a", %{input: input} do
     result = part1(input)
 
-    assert result
+    assert result == 7
   end
 
-  @tag :skip
-  test "part2", %{input: input} do
+  test "part1b", %{input2: input} do
+    result = part1(input)
+
+    assert result == 5
+  end
+
+  test "part2a", %{input: input} do
     result = part2(input)
 
-    assert result
+    assert result == 19
+  end
+
+  test "part2b", %{input2: input} do
+    result = part2(input)
+
+    assert result == 23
   end
 end
