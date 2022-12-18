@@ -19,6 +19,7 @@ defmodule AdventOfCode.Solution.Year2022.Day05 do
 
   def get_top_crates(piles) do
     IO.puts("Generating top crates")
+
     Map.keys(piles)
     |> Enum.sort()
     |> Enum.map(fn k -> piles[k] end)
@@ -26,7 +27,10 @@ defmodule AdventOfCode.Solution.Year2022.Day05 do
     |> Enum.join("")
   end
 
-  def process_new_instruction(%{"n_crates" => n_crates, "from" => from, "to" => to} = _instruction, piles) do
+  def process_new_instruction(
+        %{"n_crates" => n_crates, "from" => from, "to" => to} = _instruction,
+        piles
+      ) do
     crates = Enum.take(piles[from], n_crates)
     remain = Enum.drop(piles[from], n_crates)
 
@@ -35,7 +39,10 @@ defmodule AdventOfCode.Solution.Year2022.Day05 do
     |> Map.put(to, crates ++ piles[to])
   end
 
-  def process_instruction(%{"n_crates" => n_crates, "from" => from, "to" => to} = _instruction, piles) do
+  def process_instruction(
+        %{"n_crates" => n_crates, "from" => from, "to" => to} = _instruction,
+        piles
+      ) do
     {_from, _to, new_piles} = Enum.reduce(1..n_crates, {from, to, piles}, &move_crate/2)
     new_piles
   end

@@ -3,10 +3,10 @@ defmodule AdventOfCode.Solution.Year2022.Day06 do
     chunk_size = 4
 
     first_unique =
-    input
-    |> parse_input()
-    |> Enum.chunk_every(chunk_size, 1, :discard)
-    |> Enum.find_index(fn x -> length(Enum.uniq(x)) == length(x) end)
+      input
+      |> parse_input()
+      |> Enum.chunk_every(chunk_size, 1, :discard)
+      |> Enum.find_index(fn x -> length(Enum.uniq(x)) == length(x) end)
 
     first_unique + chunk_size
   end
@@ -15,10 +15,10 @@ defmodule AdventOfCode.Solution.Year2022.Day06 do
     chunk_size = 14
 
     first_unique =
-    input
-    |> parse_input()
-    |> Enum.chunk_every(chunk_size, 1, :discard)
-    |> Enum.find_index(fn x -> length(Enum.uniq(x)) == length(x) end)
+      input
+      |> parse_input()
+      |> Enum.chunk_every(chunk_size, 1, :discard)
+      |> Enum.find_index(fn x -> length(Enum.uniq(x)) == length(x) end)
 
     first_unique + chunk_size
   end

@@ -27,7 +27,6 @@ defmodule AdventOfCode.Solution.Year2022.Day04 do
       begin2 <= begin1 and end2 >= begin1 ->
         1
 
-
       true ->
         0
     end
@@ -44,7 +43,6 @@ defmodule AdventOfCode.Solution.Year2022.Day04 do
     range_str
     |> Enum.map(&String.split(&1, "-", trim: true))
     |> Enum.map(fn [a, b] -> {String.to_integer(a), String.to_integer(b)} end)
-
   end
 
   defp parse_input(input) do

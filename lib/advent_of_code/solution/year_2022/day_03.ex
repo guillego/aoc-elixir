@@ -1,8 +1,8 @@
 defmodule AdventOfCode.Solution.Year2022.Day03 do
   defp get_alphabet_range(int_list) do
     int_list
-    |> Enum.to_list
-    |> List.to_string
+    |> Enum.to_list()
+    |> List.to_string()
     |> String.split("", trim: true)
   end
 
@@ -13,9 +13,9 @@ defmodule AdventOfCode.Solution.Year2022.Day03 do
     letters = lowercase ++ uppercase
 
     priority_list =
-    letters
-    |> Enum.zip(1..52)
-    |> Map.new()
+      letters
+      |> Enum.zip(1..52)
+      |> Map.new()
 
     priority_list
   end
@@ -67,5 +67,4 @@ defmodule AdventOfCode.Solution.Year2022.Day03 do
     |> String.split("\n", trim: true)
     |> Enum.map(&String.split(&1, "", trim: true))
   end
-
 end

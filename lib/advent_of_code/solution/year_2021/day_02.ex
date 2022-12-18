@@ -1,21 +1,18 @@
 defmodule AdventOfCode.Solution.Year2021.Day02 do
   def part1(input) do
-
     {pos, depth} =
-    parse_input(input)
-    |> Enum.reduce({0, 0}, &process_instruction/2)
+      parse_input(input)
+      |> Enum.reduce({0, 0}, &process_instruction/2)
 
-    pos*depth
+    pos * depth
   end
 
-
   def part2(input) do
-
     {_aim, pos, depth} =
-    parse_input(input)
-    |> Enum.reduce({0, 0, 0}, &process_instruction/2)
+      parse_input(input)
+      |> Enum.reduce({0, 0, 0}, &process_instruction/2)
 
-    pos*depth
+    pos * depth
   end
 
   def process_instruction({"down", value}, {pos, depth}) do
@@ -39,9 +36,8 @@ defmodule AdventOfCode.Solution.Year2021.Day02 do
   end
 
   def process_instruction({"forward", value}, {aim, pos, depth}) do
-    {aim, pos + value, depth + aim*value}
+    {aim, pos + value, depth + aim * value}
   end
-
 
   defp parse_input(args) do
     args

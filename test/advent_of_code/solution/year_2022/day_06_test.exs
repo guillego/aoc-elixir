@@ -8,7 +8,6 @@ defmodule AdventOfCode.Solution.Year2022.Day06Test do
       input: """
       mjqjpqmgbljsphdztnvjfqwrcgsmlb
       """,
-
       input2: """
       bvwbjplbgvbhsrlpgdmjqwftvncz
       """
